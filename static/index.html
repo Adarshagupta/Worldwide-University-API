@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universities Worldwide - API Explorer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Universities Worldwide</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="search-container">
+            <form class="search-form" id="searchForm">
+                <div class="form-group">
+                    <label for="searchType">Search Type</label>
+                    <select id="searchType" name="searchType">
+                        <option value="filter">Filter Universities</option>
+                        <option value="country">Search by Country Code</option>
+                        <option value="query">General Search</option>
+                    </select>
+                </div>
+
+                <div class="form-group filter-option">
+                    <label for="country">Country</label>
+                    <input type="text" id="country" name="country" placeholder="e.g., United States">
+                </div>
+
+                <div class="form-group filter-option">
+                    <label for="state">State/Province</label>
+                    <input type="text" id="state" name="state" placeholder="e.g., California">
+                </div>
+
+                <div class="form-group filter-option">
+                    <label for="name">University Name</label>
+                    <input type="text" id="name" name="name" placeholder="e.g., Harvard">
+                </div>
+
+                <div class="form-group filter-option">
+                    <label for="domain">Domain</label>
+                    <input type="text" id="domain" name="domain" placeholder="e.g., edu">
+                </div>
+
+                <div class="form-group country-option" style="display: none;">
+                    <label for="countryCode">Country Code</label>
+                    <input type="text" id="countryCode" name="countryCode" placeholder="e.g., US" maxlength="2">
+                </div>
+
+                <div class="form-group query-option" style="display: none;">
+                    <label for="query">Search Query</label>
+                    <input type="text" id="query" name="query" placeholder="Enter search term...">
+                </div>
+
+                <div class="form-group">
+                    <label for="limit">Results Limit (optional)</label>
+                    <input type="number" id="limit" name="limit" value="" min="1" placeholder="Leave empty for all results">
+                </div>
+
+                <div class="form-group">
+                    <label>&nbsp;</label>
+                    <button type="submit">Search</button>
+                </div>
+            </form>
+
+            <div id="apiUrl" class="api-url"></div>
+        </section>
+
+        <section class="results-container">
+            <div id="loading" class="loading" style="display: none;">Loading...</div>
+            <div id="error" class="error" style="display: none;"></div>
+            <div id="results"></div>
+            <div id="pagination" class="pagination"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html> 
