@@ -1,0 +1,42 @@
+{
+  "name": "university-api-client",
+  "version": "1.1.0",
+  "description": "A JavaScript client library for the Worldwide University API",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "test:unit": "jest UniversityApiClient.test.ts",
+    "test:integration": "INTEGRATION_TEST=true jest integration.test.ts",
+    "test:all": "npm run test:unit && npm run test:integration",
+    "prepare": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Adarshagupta/Worldwide-University-API.git"
+  },
+  "homepage": "https://worldwide-university-api.onrender.com",
+  "keywords": [
+    "university",
+    "api",
+    "education",
+    "search",
+    "typescript",
+    "worldwide",
+    "universities",
+    "academic"
+  ],
+  "author": "Adarsha Gupta",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^29.5.0",
+    "@types/node": "^18.15.11",
+    "jest": "^29.5.0",
+    "ts-jest": "^29.1.0",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "axios": "^1.3.5"
+  }
+} 

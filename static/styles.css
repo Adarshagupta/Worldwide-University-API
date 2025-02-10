@@ -153,4 +153,96 @@ button:hover {
 
 .link:hover {
     text-decoration: underline;
+}
+
+.api-info {
+    text-align: center;
+    color: #6b7280;
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.api-info a {
+    color: #2563eb;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.api-info a:hover {
+    color: #1d4ed8;
+    text-decoration: underline;
+}
+
+.dev-info {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.dev-info h2 {
+    color: #1f2937;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.npm-package h3 {
+    color: #2563eb;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.code-block {
+    background: #f8fafc;
+    padding: 1rem;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.code-block code {
+    font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+    color: #1f2937;
+}
+
+.copy-btn {
+    background: #e5e7eb;
+    color: #4b5563;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    transition: all 0.2s;
+}
+
+.copy-btn:hover {
+    background: #d1d5db;
+}
+
+.usage-example {
+    margin-bottom: 1.5rem;
+}
+
+.usage-example h4 {
+    color: #4b5563;
+    margin-bottom: 0.5rem;
+}
+
+.usage-example pre {
+    background: #f8fafc;
+    padding: 1rem;
+    border-radius: 6px;
+    overflow-x: auto;
+}
+
+.usage-example code {
+    font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+    color: #1f2937;
+    line-height: 1.5;
+}
+
+.package-links {
+    font-size: 0.95rem;
+    color: #6b7280;
 } 

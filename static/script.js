@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://localhost:8000/api';
+const API_BASE_URL = 'https://worldwide-university-api.onrender.com/api';
 
 document.addEventListener('DOMContentLoaded', () => {
     const searchForm = document.getElementById('searchForm');

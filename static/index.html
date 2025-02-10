@@ -3,18 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Universities Worldwide - API Explorer</title>
+    <title>Worldwide Universities API Explorer</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>Universities Worldwide</h1>
+            <h1>Worldwide Universities API</h1>
+            <p class="api-info">
+                Official API: <a href="https://worldwide-university-api.onrender.com" target="_blank" class="link">worldwide-university-api.onrender.com</a>
+                | <a href="https://github.com/Adarshagupta/Worldwide-University-API" target="_blank" class="link">GitHub</a>
+                | <a href="https://worldwide-university-api.onrender.com/docs" target="_blank" class="link">API Docs</a>
+            </p>
         </div>
     </header>
 
     <main class="container">
+        <section class="dev-info">
+            <h2>🚀 For Developers</h2>
+            <div class="npm-package">
+                <h3>NPM Package Available</h3>
+                <div class="code-block">
+                    <code>npm install university-api-client</code>
+                    <button class="copy-btn" onclick="copyToClipboard('npm install university-api-client')">Copy</button>
+                </div>
+                <div class="usage-example">
+                    <h4>Quick Example:</h4>
+                    <pre><code>import { UniversityApiClient } from 'university-api-client';
+
+const client = new UniversityApiClient();
+
+// Search universities
+const results = await client.searchUniversities({
+    query: 'Technology',
+    limit: 5
+});</code></pre>
+                </div>
+                <p class="package-links">
+                    <a href="https://github.com/Adarshagupta/Worldwide-University-API/tree/main/frontend" target="_blank" class="link">Package Documentation</a>
+                    | <a href="https://www.npmjs.com/package/university-api-client" target="_blank" class="link">NPM Page</a>
+                </p>
+            </div>
+        </section>
+
         <section class="search-container">
             <form class="search-form" id="searchForm">
                 <div class="form-group">
@@ -78,6 +110,17 @@
         </section>
     </main>
 
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = document.querySelector('.copy-btn');
+                btn.textContent = 'Copied!';
+                setTimeout(() => {
+                    btn.textContent = 'Copy';
+                }, 2000);
+            });
+        }
+    </script>
     <script src="script.js"></script>
 </body>
 </html> 
