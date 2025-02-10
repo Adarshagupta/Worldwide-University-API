@@ -11,6 +11,7 @@ A FastAPI-based REST API service that provides comprehensive information about u
 - Modern web interface for API testing
 - CORS enabled
 - No rate limits
+- Docker support
 
 ## API Endpoints
 
@@ -41,6 +42,33 @@ Query Parameters:
 - `limit` (optional): Number of results to return
 
 ## Setup
+
+### Using Docker (Recommended)
+
+1. Clone the repository:
+```bash
+git clone https://github.com/Adarshagupta/Worldwide-University-API.git
+cd Worldwide-University-API
+```
+
+2. Build and run using Docker Compose:
+```bash
+docker-compose up --build
+```
+
+The API will be available at `http://localhost:8000`
+
+To run in detached mode:
+```bash
+docker-compose up -d
+```
+
+To stop the service:
+```bash
+docker-compose down
+```
+
+### Manual Setup
 
 1. Clone the repository:
 ```bash
@@ -90,9 +118,30 @@ Note: If state/province information is not available, it will return "NA".
 ## Technologies Used
 
 - FastAPI
-- Python 3.7+
+- Python 3.9+
 - HTML/CSS/JavaScript
 - Uvicorn ASGI server
+- Docker
+- Docker Compose
+
+## Development
+
+### Running Tests
+```bash
+# TODO: Add testing instructions
+```
+
+### Docker Commands
+
+Build the image:
+```bash
+docker build -t university-api .
+```
+
+Run the container:
+```bash
+docker run -p 8000:8000 university-api
+```
 
 ## Contributing
 

@@ -33,4 +33,13 @@ ENV/
 
 # OS
 .DS_Store
+Thumbs.db
+
+# Docker
+.docker/
+docker-compose.override.yml
+*.env
+
+# OS
+.DS_Store
 Thumbs.db 
